@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect } from "react";
 import {
   useParams,
   useNavigate,
@@ -76,9 +76,8 @@ export default function MovieDetailView() {
                 </Link>
               </LinkStyled>
             </ul>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Outlet />
-            </Suspense>
+
+            <Outlet />
           </div>
         </>
       )}
